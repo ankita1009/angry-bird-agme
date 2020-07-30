@@ -7,13 +7,14 @@ var engine,world;
 var ground,box1,box2;
 var pig;
 var log,bird;
-
+var platform;
 
 function setup() {
   createCanvas(1200,400);
   engine = Engine.create();
   world = engine.world;
 
+platform=new ground(150,305,300,170)
   box1=new Box(700,320,70,70);
   box2=new Box(920,300,70,70);
   box3=new Box(700,240,70,70);
@@ -32,6 +33,7 @@ function setup() {
 function draw() {
   background("white");  
   Engine.update(engine);
+platform.display();
  box1.display();
  box2.display();
  box3.display();
